@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* -----{Start global rulez}----- */
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body
+{
+    background-color: #fafafa;
+    line-height: 1.6;
+    height: 100vh;
+    background: rgb(30, 30, 57);
+}
+/* -----{End global rulez}----- */
+
+/* [Start Header] */
+header
+{
+    height: 100%;
+    color: #fafafa;
+    padding: 20px;
+    position: relative;
+    z-index: 999999;
+}
+
+header nav
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100%;
+    width: 70vw;
+    max-width: 600px;
+    background-color: rgba(85, 80, 135, 0.4);
+    box-shadow: 0 0 20px rgba(37, 35, 49, 0.8);
+    border-radius: 10px;
+    padding: 2em;
+    transform: scale(.15) translateX(-400%);
+    transition: transform 500ms ease-in-out;
+    z-index: 999999;
+}
+
+header nav.has-clicked
+{
+    transform: translateY(0) scale(1)
+}
+
+div.brand-container
+{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 2.5em
+}
+
+div.brand-container img
+{
+    width: 100px;
+    
+    display: block;
+}
+
+header nav ul
+{
+    list-style-type: none;
+    color: #fafafa;
+    display: flex;
+    flex-flow: column wrap
+}
+
+header nav ul li
+{
+    padding: 10px 0;
+    margin: 10px 5px;
+    position: relative;
+    overflow: hidden
+}
+
+header nav ul li::after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #fafafa;
+    bottom: 5px;
+    transform: translateX(-95%);
+    transition: transform .5s ease-in-out
+}
+
+header nav ul li:hover::after,
+header nav ul li:focus::after
+{
+    transform: translateX(0);    
+}
+
+header nav ul li a
+{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 28px;
+    font-style: normal;
+    transition: 0.5s;
+}
+
+header nav ul li a:hover {
+    transition: 0.5s;
+    color: #e7c3d8;
+}
+
+#active {
+    color: #b6ace3;
+}
+
+header div.toggle-menu
+{
+    padding: 1em 1.5em 1em 0;
+    position: absolute;
+    top: 2em;
+    right: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer
+}
+
+header div.toggle-menu span.hamburger-menu
+{
+    width: 2em;
+    height: 1px;
+    border-radius: 50px;
+    background-color: #fafafa;
+    transition: width 250ms ease-in-out
+}
+
+header div.toggle-menu span.hm-1
+{
+    width: 2.4em;
+    height: 3px;
+    transform: translateY(-6px)
+}
+
+header div.toggle-menu:hover span.hamburger-menu.hm-2,
+header div.toggle-menu:focus span.hamburger-menu.hm-2
+{
+    width: 2.4em
+}
+
+header div.toggle-menu span.hamburger-menu.hm-3
+{
+    width: 2.4em;
+    height: 3px;
+    transform: translateY(6px)
+}
+
+header div.toggle-menu.is-open span.hm-2
+{
+    transition: opacity 120ms ease-in-out;
+    opacity: 0
+}
+
+header div.toggle-menu span.hamburger-menu
+{
+    transition: all 300ms ease-in-out
+}
+
+header div.toggle-menu.is-open span.hm-1
+{
+    transform: translateY(2px) rotate(45deg)
+}
+
+header div.toggle-menu.is-open span.hm-3
+{
+    transform: translateY(-2px)rotate(-45deg)
+}
+
+.title {
+    color: #fafafa;
+    margin-bottom: 1em;
+    top: 30%;
+    left: 50%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /* uppercase */
+    letter-spacing: 2px;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.img-header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.img-header img {
+    max-width: 15%;
+    object-fit: cover;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.explore {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    font-weight: 550;
+}
+
+#signup {
+    padding: 0.65rem 1.5rem;
+    margin: 5px;
+    border-radius: 3em;
+    border: 1.5px solid #e68fb2;
+    color: white;
+    text-decoration: none;
+}
+
+#login {
+    padding: 0.65rem 1.5rem;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    border-radius: 3em;
+    background-color: #6d7dd3;
+    text-decoration: none;
+}
+
+
+/* [Start Header] */
+
+/* [Start Media Queries] */
+
+@media (min-width: 768px)
+{
+
+    .img-header img {
+        max-width: 30%;
+    }
+   header
+   {
+      padding: 1em 3em
+   }
+
+   header nav
+   {
+       display: block;
+       box-shadow: none;
+       background-color: black;
+       width: 100%;
+       height: auto;
+       max-width: 100%;
+       padding: 0;
+       margin: 0;
+       transform: scale(1) translateY(0)
+   }
+    
+    div.brand-container
+    {
+      top: 0;
+      left: 0;
+    }
+
+    header nav ul
+    {
+      display: block;
+      float: right;
+    }
+
+    header nav ul li
+    {
+       display: inline-block;
+       margin-right: 2.4em;
+    }
+    
+    header nav ul li:last-of-type
+    {
+       margin-right: 0;
+    }
+    
+   header div.toggle-menu
+   {
+      display: none
+   }
+
+}
+
+@media screen and (max-width: 767px)
+{
+
+    header {
+        z-index: 999999;
+    }
+    .img-header img {
+        max-width: 80%;
+        top: 50%;
+    }
+
+    .title {
+        width: 100%;
+        font-size: 2.5em;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .explore {
+        top: 75%;
+    }
+    
+    #login {
+        font-size: 30px;
+        border-radius: 50px;
+        padding: 12px;
+    }
+
+    #signup {
+        font-size: 30px;
+        border-radius: 50px;
+        padding: 12px;
+    }
+
+}
+
+/* [End ]Media Queries] */

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/search.css">
+
+    <title>Simple Social - Search Profile</title>
+</head>
+<body>
+    <div class="notification" id="notification">
+        <div class="loadbar" id="loading-bar"></div>
+    </div>
+
+    <div id="users" class="search-container">
+        <input type="text" id="search-input" placeholder="Search for a profile">
+        <div id="profile-list" class="profile-list"></div>
+        <!-- <div class="profile">
+            <p id="username">{{ username }}</p>
+            <p id="fav"><span id="heart" class="material-symbols-outlined">favorite</span>0</p>
+            <img src="./src/avatar/avatar.jpg" alt="avatar" id="avatar">
+        </div>  -->
+        </div>
+    </div>
+    <script src="./socket.io/socket.io.js" type="text/javascript"></script>
+    <script src="./js/search.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

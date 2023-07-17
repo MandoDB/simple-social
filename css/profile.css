@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    background: rgb(30, 30, 57);
+}
+
+.profile-container {
+    max-width: 70%;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgba(23, 25, 46, 0.495);
+    /* middle of page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+}
+
+.profile-container .avatar {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid rgb(30, 30, 57);
+}
+
+.profile-container .profile-info {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.profile-container .profile-info h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.profile-container .profile-info p {
+    color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+#logout {
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    background: #4a4b5233;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: white;
+    transition: 0.2s;
+}
+
+#logout:hover {
+    background-color: #6b6d7996;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#logout:active {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px 0px #a5a5a56c;
+}
+
+#search {
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    background: #4a4b5233;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: white;
+    transition: 0.2s;
+}
+
+#search:hover {
+    background-color: #6b6d7996;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#search:active {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px 0px #a5a5a56c;
+}
+
+#bio {
+    width: 30%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    display: none;
+    background: transparent;
+    border-radius: 25px;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+    margin: 0 auto;
+}
+
+#bio-text {
+    margin-top: 10px;
+    color:rgb(91, 91, 121);
+    width: 100%;
+}
+
+/* span with specific content */
+#edit {
+    vertical-align: bottom; 
+    font-size: 18px !important;
+    padding: 0 5px;
+    transition: 0.5s;
+}
+
+#edit:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+
+/* semi transparent black on the image to edit the avatar */
+
+.avatar:hover ~ .edit-avatar {
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.edit-avatar {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.edit-avatar span {
+    color: white;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+/* notifications */
+/* SCROLL DOWN UNTIL ANOTHER COMMENT, "USELESS" CODE HERE */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /*COLORS*/
+    --text: rgb(58, 67, 76); 
+    --white: rgb(224, 224, 224);
+    --background: rgb(23, 29, 41);
+    --body: rgb(29, 31, 43);
+    --main: rgb(70, 175, 248);
+    --fail: rgb(248, 70, 70);
+    --link: rgb(207, 51, 246);
+    --link-hover: rgb(231, 136, 255);
+    /*FONT*/
+    --poppins: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* THIS IS WHERE OUR NOTIFICATION STYLING STARTS */
+/*    CODE ABOVE THIS IS JUST FROM MY PROJECT    */
+.notification {
+    z-index: 999999999; /*NOTIFICATIONS #1 PUT EM UP*/
+    position: absolute;
+    padding: 8px 22px;
+    background-color: var(--body);
+    border: 1px solid var(--text);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -200px;
+    border-radius: 13px;
+    font-family: var(--poppins);
+    color: var(--white);
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.notification .loadbar {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main);
+    bottom: 0;
+    left: 0;
+}
+
+/* IMPORTANT STUFF YK? */
+.notification b {
+    color: var(--main);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(70, 174, 248, 0.4);
+}
+
+.status-container input {
+    background: #4a4b5233;
+    color: white;
+    border: none;
+    outline: none;
+    bottom: 10px;
+    left: 10px;
+    position: fixed;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* .post-status {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    background: #4a4b5233;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    bottom: 10px;
+    left: 32%;
+    position: fixed;
+    cursor: pointer;
+} */
+
+.friends {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    border-radius: 10px;
+    background: #4a4b5233;
+    z-index: 999999999;
+    display: block;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.friends:hover {
+    background: #6b6d7996;
+    transition: 0.5s;
+}
+
+.friends:active {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 20px 0px #a5a5a56c;
+}
+
+.friends span {
+    color: red;
+    vertical-align: bottom; 
+    margin-right: 5px;
+    font-size: 18px !important;
+}
+
+.friends p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .profile-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .status-container input {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .profile-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .status-container input {
+        width: 30%;
+    }
+}
